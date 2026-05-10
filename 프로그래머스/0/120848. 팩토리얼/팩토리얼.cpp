@@ -1,0 +1,21 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+long long factorial(int n) {
+    if (n <= 1) return 1;
+    return n * factorial(n - 1);
+}
+
+int solution(int n) {
+    int answer = 0;
+    
+    for(int i = 1; i <= 10; ++i) {
+        if (factorial(i) <= n) {
+            answer = i;
+        }
+    }
+    
+    return answer;
+}
